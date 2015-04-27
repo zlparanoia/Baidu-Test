@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: blue;
+}
+
+h2 {
+	font-size: 14px;
+}
+
+p {
+	font-size: 12px;
+	color: yellow;
+	background-color: #000;
+}
+
+.myimg {
+	border: 2px solid red;
+}
+
+.wrap_one {
+	position: relative;
+}
+
+.one_left {
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	background-color: #FF0000;
+}
+
+.one_right {
+	height: 100px;
+	background-color: #0000FF;
+}
+
+.two_left {
+	width: 200px;
+	height: 100px;
+	float: left;
+	background-color: #FF0000;
+}
+
+.two_right {
+	height: 100px;
+	background-color: #0000FF;
+}
+.wrap_three {
+	width: 100%;
+	float: left;
+}
+
+.three_left {
+	width: 200px;
+	height: 100px;
+	float: left;
+	margin-left: -100%;
+	background-color: #F1419D;
+}
+
+.three_mid {
+	height: 100px;
+	margin: 0 200px;
+	background-color: #E3EE11;
+}
+
+.three_right {
+	width: 200px;
+	height: 100px;
+	float: left;
+	margin-left: -200px;
+	background-color: #A9FF53;
+}
+
+.wrap_four {
+	position: relative;
+}
+
+.four_left {
+	width: 200px;
+	height: 100px;
+	background-color: #EB52CC;
+	position: absolute;
+}
+
+.four_mid {
+	height: 100px;
+	margin: 0 200px;
+	background-color: #FFFF3E;
+}
+
+.four_right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height: 100px;
+	background-color: #9EFF3E;
+}
+
+.contain {
+	background-color: #FF0000;
+	overflow: hidden; 
+}
+.contain ul{
+	list-style: none;
+}
+
+.contain ul li {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	background-color: #0000FF;
+}
