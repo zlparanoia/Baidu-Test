@@ -212,6 +212,7 @@ footer a , .footer_mid , .copyright{
 	width: 980px;
 	margin: 0 auto;
 	padding-top: 20px;
+	position: relative;
 }
 
 .inside_left {
@@ -500,7 +501,7 @@ footer a , .footer_mid , .copyright{
 }
 
 .pic_four, .pic_four img {
-	width: 170px;
+	width: 150px;
 	background-color: #EFBB4E;
 }
 
@@ -513,7 +514,7 @@ footer a , .footer_mid , .copyright{
 }
 
 .pic_five, .pic_five img {
-	width: 170px;
+	width: 150px;
 	background-color: #EFBB4E;
 }
 
@@ -522,7 +523,7 @@ footer a , .footer_mid , .copyright{
 }
 
 .pic_five {
-	height: 160px;
+	height: 150px;
 }
 
 #stress {
@@ -539,6 +540,98 @@ footer a , .footer_mid , .copyright{
 	background-color: #fff;
 }
 
+.about_mid {
+	width: 180px;
+	height: 1000px;
+	position: absolute;
+	left: 400px;
+}
+
+.image{
+	background: url(../img/me.jpg);
+	border-radius: 100px;
+	height: 160px;
+	width: 160px;
+	border: 10px solid #E0E0E0;
+}
+
+.about_left, .about_right {
+	width: 488px;
+	background-color: #fff;
+	height: 1000px;	
+	margin-top: 80px;
+}
+
+.about_left {
+	float: left;
+}
+
+.about_right {
+	float: right;
+}
+
+.about {
+	float: right;
+	margin-right: 100px;
+}
+
+.name, .self {
+	height: 120px;
+	margin-top: 100px;
+}
+
+.self {
+	text-indent: 30px;
+}
+
+.phone {
+	background: url(../img/phone.jpg);
+}
+
+.phone, .school {
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	border: 2px solid #E0E0E0;
+	margin-top: 150px;
+	margin-left: 47px;
+}
+
+.school {
+	background: url(../img/school.jpg);
+}
+
+.right {
+	margin-left: 50px;
+	width: 300px;
+}
+
+.contact, .tel {
+	margin-top: 120px;
+}
+
+.education, .high {
+	margin-top: 227px;
+}
+
+.year {
+	margin-top: 50px;
+}
+
+.year ul li {
+	width: 50px;
+	height: 20px;
+	background-color: #fff;
+	border: 2px solid #E0E0E0;
+	margin: 0 auto;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.university {
+	margin-top: 25px;
+}
 
 
 
