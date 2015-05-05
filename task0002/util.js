@@ -83,9 +83,43 @@ var a = [1, 3, 5, 7, 5, 3];
 var b = uniqArray(a);
 console.log(b); // [1, 3, 5, 7]
 
-// 实现一个简单的trim函数，用于去除一个字符串，头部和尾部的空白字符
-// 假定空白字符只有半角空格、Tab
-// 练习通过循环，以及字符串的一些基本方法，分别扫描字符串str头部和尾部是否有连续的空白字符，并且删掉他们，最后返回一个完成去除的字符串
-function simpleTrim(str) {
+// 对字符串头尾进行空格字符的去除、包括全角半角空格、Tab等，返回一个字符串
+// 尝试使用一行简洁的正则表达式完成该题目
+function trim(str) {
    return str.replace(/(^\s*)|(\s*$)/g, "");
 }
+
+var str = '   hi!  ';
+str = trim(str);
+console.log(str); // 'hi!'
+
+// 实现一个遍历数组的方法，针对数组中每一个元素执行fn函数，并将数组索引和元素作为参数传递
+function each(arr, fn) {
+    arr.forEach(fn);
+}
+
+var arr = ['java', 'c', 'php', 'html'];
+function output(item) {
+    console.log(item)
+}
+each(arr, output);  // java, c, php, html
+
+使用示例
+var arr = ['java', 'c', 'php', 'html'];
+function output(item, index) {
+    console.log(index + ': ' + item)
+}
+each(arr, output);  // 0:java, 1:c, 2:php, 3:html
+
+function getObjectLength(obj) {
+	return Object.keys(obj).length;
+}
+var obj = {
+    a: 1,
+    b: 2,
+    c: {
+        c1: 3,
+        c2: 4
+    }
+};
+console.log(getObjectLength(obj));  //3
