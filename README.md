@@ -32,3 +32,6 @@ zoom: 1; // 触发ie6的haslayout，因为ie6不支持：after伪类
 
 ### 5-4：完成task0002的2.1部分js练习题。
 ### 5-5：完成task0002的2.1部分js练习题。
+
+### 5-6：完成task002的3.1部分js练习题。
+总结：bug很多，而且都是低级的错误，循环遍历当然用while而不是if，使用独立的if,而不是else if，若用else if当判断nextnode时会被忽略。前一个元素节点为prevoisElementSibling。还是得多练多练 。。。。
