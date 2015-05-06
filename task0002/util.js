@@ -111,6 +111,7 @@ function output(item, index) {
 }
 each(arr, output);  // 0:java, 1:c, 2:php, 3:html
 
+// 获取一个对象里面第一层元素的数量，返回一个整数
 function getObjectLength(obj) {
 	return Object.keys(obj).length;
 }
@@ -122,4 +123,77 @@ var obj = {
         c2: 4
     }
 };
-console.log(getObjectLength(obj));  //3
+console.log(getObjectLength(obj)); //3
+
+// 判断是否为邮箱地址
+function isEmail(emailStr) {
+    var email = /([\.a-zA-Z0-9-]+@([a-zA-Z0-9])+(\.[a-zA-Z0-9]))/;
+    if(email.test(emailStr)){
+    	alert("格式正确");
+    } else {
+    	alert("格式不正确");
+    }
+}
+isEmail("65765@qq.com");       // 格式正确
+
+
+// 判断是否为手机号
+function isMobilePhone(phone) {
+    var tel = /^1\d{10}$/;
+    if (tel.test(phone)) {
+    	alert("格式正确");
+    } else {
+    	alert("格式不正确");
+    }
+}
+isMobilePhone('12322344234');     //格式正确
+
+// 为element增加一个样式名为newClassName的新样式
+function addClass(element, newClassName) {
+    element.classList.add(newClassName);
+}
+
+// 移除element中的样式oldClassName
+function removeClass(element, oldClassName) {
+    element.classList.remove(oldClassName);
+}
+
+// 判断siblingNode和element是否为同一个父元素下的同一级的元素，返回bool值
+function isSiblingNode(element, siblingNode) {
+    //保存节点前一个节点的值
+	var prevoisnode = element.previousElementSibling;
+    //保存节点后一个节点的值  
+	var nextnode = element.nextElementSibling;          
+    //循环往前判断有没有匹配的节点
+	while (prevoisnode != null) { 
+	//取节点的小写名称并匹配             
+		if (prevoisnode.nodeName.toLowerCase() == siblingNode) {
+			return true;
+		} else {
+		//不匹配则往前找
+			prevoisnode = prevoisnode.previousElementSibling;  
+		}
+	}
+	//循环往后判断有没有匹配的节点
+	while (nextnode != null) {                 
+		if (nextnode.nodeName.toLowerCase() == siblingNode) {
+			return true;
+		} else {
+			//不匹配则往后找
+			nextnode = nextnode.nextElementSibling;
+		}
+	}
+	//若没找到节点返回false
+	if (prevoisnode == null && nextnode == null) {     
+		return false;
+	}
+}
+
+// 获取element相对于浏览器窗口的位置，返回一个对象{x, y}
+function getPosition(element) {
+	var obj = {
+		x: element.clientWidth,
+		y: element.clientHeight
+	};
+	return obj;
+}
