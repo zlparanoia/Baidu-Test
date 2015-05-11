@@ -104,7 +104,7 @@ function output(item) {
 }
 each(arr, output);  // java, c, php, html
 
-使用示例
+//使用示例//
 var arr = ['java', 'c', 'php', 'html'];
 function output(item, index) {
     console.log(index + ': ' + item)
@@ -272,3 +272,63 @@ console.log($("[data-time=2015]")); // 返回第一个包含属性data-time且�
 // 可以通过简单的组合提高查询便利性，例如
 console.log($("#adom .classa")); //a
  //返回id为adom的DOM所包含的所有子节点中，第一个样式定义包含classa的对象
+
+// 给一个element绑定一个针对event事件的响应，响应函数为listener
+var EventUtil = {
+    addHandler: function(element,type,handler){
+		if(element.addEventListener){
+			element.addEventListener(type,handler,false);
+		}else if(element.addHandler){
+			element.addHandler("on" + type,handler);
+		}else {
+			element["on" + type] = handler;
+		}
+	},
+	removeHandler: function(element,type,handler){
+		if(element.addEventListener){
+			element.addEventListener(type,handler,false);
+		}else if(element.addHandler){
+			element.addHandler("on" + type,handler);
+		}else {
+			element["on" + type] = null;
+		}
+	},
+	getCharCode: function(event){
+		if(typeof event.CharCode == "number"){
+			return event.CharCode;
+		}else {
+			return event.keyCode;
+		}
+	},
+	getEvent: function(event){
+		return event ? event : window.event;
+	},
+	getTarget: function(event){
+		return event.target || event.srcElement; 
+	},
+	preventDefault: function(event){
+		if(event.preventDefault){
+			event.preventDefault();
+		}else {
+			event.returnValue = false;
+		}
+	},
+	stopPropagation: function(event){
+		if(event.stopPropagation){
+			event.stopPropagation();
+		}else {
+			event.cancelBubble = true;
+		}
+	}
+}
+
+// 判断是否为IE浏览器，返回-1或者版本号
+function isIE() {
+    if(!+[1,]) {
+    	var agent = navigator.userAgent.toLowerCase();
+    	var vertion = /msie ([\d.]+)/.exec(agent);
+    	return vertion[1];
+    } else {
+    	return -1;
+    }
+}
