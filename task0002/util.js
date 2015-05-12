@@ -332,3 +332,27 @@ function isIE() {
     	return -1;
     }
 }
+
+// 设置cookie
+function setCookie(cookieName, cookieValue, expiredays) {
+    var cookieTest = encodeURIComponent(cookieName) + "=" + 
+                     encodeURIComponent(cookieValue);
+    cookieTest += "; expiredays" + expiredays.toGMTString();
+    document.cookie = cookieTest;
+}
+
+// 获取cookie值
+function getCookie(cookieName) {
+    var strcookie = document.cookie;
+    
+    var arr = strcookie.split(";");
+    var val;
+    for(var i = 0, len = strcookie.length; i < len; i++) {
+    	var name = arr[i].split("=");
+    	if(name[0] == cookieName) {
+    		val = name[1];
+    		break;
+    	}
+    }
+    return val;
+}
