@@ -349,7 +349,7 @@ function getCookie(cookieName) {
     var val;
     for(var i = 0, len = strcookie.length; i < len; i++) {
     	var name = arr[i].split("=");
-    	if(name[0] == cookieName) {
+    	if(name[0].trim() == cookieName) {                  //trim()去掉字符串前后空格
     		val = name[1];
     		break;
     	}
