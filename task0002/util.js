@@ -356,3 +356,52 @@ function getCookie(cookieName) {
     }
     return val;
 }
+
+// 
+function ajax(url, options) {
+    if (typeof url !== 'string') {
+    	return;
+    }
+	var type = options.type || 'post',
+		data = options.data || null,
+		onsuccess = options.onsuccess || function(res) {
+			console.log(res);
+		},
+		onfail = options.onfail || function(err) {
+			console.log(err);
+		},
+    	xmlhttp;
+    
+	if(window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	} else {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange = function() {
+		if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			onsuccess(xmlhttp.responseText, xmlhttp);
+			//document.getElementById("change").innerHTML = xmlhttp.responseText;
+		} else {
+			onfail();
+		}	
+	};
+	xmlhttp.open(type, url, true);
+	xmlhttp.send(data);
+}
+
+// 使用示例：
+ajax(
+    'http://localhost:8080/server/ajaxtest', 
+    {
+        data: {
+            name: 'simon',
+            password: '123456'
+        },
+        onsuccess: function (responseText, xhr) {
+            console.log(responseText);
+        },
+        onfail: function () {
+        	console.log("fail");
+        }
+    }
+)
