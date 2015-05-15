@@ -19,3 +19,7 @@
     正则表达式：exec返回匹配的数组；通过()创建子匹配。?:表示不捕获自匹配。
 ### 5-11:
     判断浏览器是否为ie最简单方法：if(!+[1,]){}; 获取浏览器版本号的正则匹配/msie ([\d.]+)/。
+### 5-15:
+     itemsHtml += "<input type = 'checkbox'><label>" + arr[i] + "</label><br/>";
+     con.innerHTML = itemsHtml;//innerHTML会替换所有子节点，所以先累加到变量再赋值
+
