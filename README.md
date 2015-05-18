@@ -49,3 +49,6 @@ zoom: 1; // 触发ie6的haslayout，因为ie6不支持：after伪类
 ### 5-17：完成task002的小练习2。
 总结：提取月份方法getMonth()返回的值是0-6，因此还得+1。getDay()是获取星期，getDate()才是获取日期。
 
+### 5-18：完成task002的小练习3。
+总结：尽量把事件写在js里,避免<button onclick=""></button>这种方式触发事件。事件后跟着function(){}再调用函数。
+      div.onclick = function(){ countdown();};
