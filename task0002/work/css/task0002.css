@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul { list-style: none;}
+
+#focuse {
+	position: relative;
+	width: 250px;
+	height: 200px;
+	overflow: hidden;
+	margin: 100px auto;
+}
+
+#list {
+	position: absolute;
+	bottom: 10px;
+	left: 35%;
+}
+
+#list li {
+	float: left;
+	margin-right: 5px;
+	border-radius: 50px;
+	border: 1px solid #fff;
+	width: 10px;
+	height: 10px;
+}
+
+.active {
+	background-color: #fff;
+}
