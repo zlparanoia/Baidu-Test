@@ -52,3 +52,5 @@ zoom: 1; // 触发ie6的haslayout，因为ie6不支持：after伪类
 ### 5-18：完成task002的小练习3。
 总结：尽量把事件写在js里,避免<button onclick=""></button>这种方式触发事件。事件后跟着function(){}再调用函数。
       div.onclick = function(){ countdown();};
+
+### 5-19：完成task002的小练习4。
