@@ -23,3 +23,21 @@
      itemsHtml += "<input type = 'checkbox'><label>" + arr[i] + "</label><br/>";
      con.innerHTML = itemsHtml;//innerHTML会替换所有子节点，所以先累加到变量再赋值
 
+### 5-20:
+task0002-4练习：
+bug1:js获取不了css属性
+solution:js不能直接用style获取,获取函数：
+function getDefaultStyle(obj, attribute) {
+	return obj.currentStyle ? +obj.currentStyle[attribute].slice(0, -2) :
+		+document.defaultView.getComputedStyle(obj, false)[attribute].slice(0, -2);
+}
+slice(0, -2):把px前的数值截取。
+
+bug2:在css上设置position属性导致重叠
+solution:在使用left、top属性之前用js动态添加position属性。
+!(dragging.style.position) && (dragging.style.position = 'absolute');
+dragging.style.position为null时设置为absolute。
+
+bug3:赋值错误。
+solution:dragging.style.left = right.offsetLeft + "px";左边为值+"px",右边也得同样
+         添加"px",保持一致性。
