@@ -31,3 +31,28 @@ ul { list-style: none;}
 .active {
 	background-color: #fff;
 }
+.draggable {
+	width: 200px;
+	height: 50px;
+	border: 1px solid #000;
+	cursor: move;
+}
+
+.drag_left li{
+	background-color: red;
+}
+
+.drag_left, .drag_right {
+	width: 200px;
+	height: 500px;
+	border: 1px solid #000;
+	float: left;
+}
+
+.drag_right li{
+	background-color: blue;
+}
+
+.drag_right {
+	margin-left: 100px;
+}
