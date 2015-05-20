@@ -54,3 +54,5 @@ zoom: 1; // 触发ie6的haslayout，因为ie6不支持：after伪类
       div.onclick = function(){ countdown();};
 
 ### 5-19：完成task002的小练习4。
+
+### 5-20：完成task002的小练习5。
