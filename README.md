@@ -56,3 +56,11 @@ zoom: 1; // 触发ie6的haslayout，因为ie6不支持：after伪类
 ### 5-19：完成task002的小练习4。
 
 ### 5-20：完成task002的小练习5。
+总结：1. [] 里可为任意表达式。变量名称当成属性名称。
+var name = "length"; 
+var text = "coco";
+text[name];   //4
+
+2. in:判断一个对象是否有某个属性，包括原型。
+  hasOwnProperty():判断一个对象是否有某个实例属性，不包括原型。
+ "name" in obj;  obj.hasOwnProperty("name");    主要加上""
