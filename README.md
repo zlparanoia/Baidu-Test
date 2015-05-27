@@ -64,3 +64,5 @@ text[name];   //4
 2. in:判断一个对象是否有某个属性，包括原型。
   hasOwnProperty():判断一个对象是否有某个实例属性，不包括原型。
  "name" in obj;  obj.hasOwnProperty("name");    主要加上""
+
+### 5-27：完成task0003部分功能。
