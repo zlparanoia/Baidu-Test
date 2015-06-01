@@ -66,3 +66,5 @@ text[name];   //4
  "name" in obj;  obj.hasOwnProperty("name");    主要加上""
 
 ### 5-27：完成task0003部分功能。
+
+### 6-1：完成javascript作用域链学习笔记。
