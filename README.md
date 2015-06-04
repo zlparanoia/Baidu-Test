@@ -70,3 +70,8 @@ text[name];   //4
 ### 6-1：完成javascript作用域链学习笔记。
 
 ### 6-2：完成javascript原型学习笔记。
+
+### 6-3: 完成javascript构造函数学习笔记。
+
+### 6-4：完成javascript闭包学习笔记。
+         完成javascript面向对象学习笔记。
