@@ -1,0 +1,54 @@
+JavaScript构造函数学习笔记
+
+在js中，每个函数都有名为“prototype”的属性，用于引用原型对象。此原型对象又有名为“constructor”的属性，它反过来引用函数本身。这是一种循环引用。
+function Dog(){}
+Dog === Dog.prototype.constructor； //true
+
+this:
+var someone = {
+     name: "Bob",
+     showName: function(){
+          alert(this.name);
+     }
+};
+var other = {
+     name: "Tom",
+     showName: someone.showName
+};
+other.showName(); // Tom
+this指向函数执行时的当前对象。this在js中和执行环境有关，而非声明环境。当没有明确的执行时的当前对象时，this指向全局对象window。
+this关键字虽然是在someone.showName中声明的，但运行的时候是other.showName，所以this指向other.showName函数的当前对象，即other，故最后alert出来的是other.name。
+
+在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象是全局对象window。
+var name = "window";
+
+var Bob = {
+    name: "Bob",
+    showName: function(){
+        alert(this.name);
+    }
+};
+
+var Tom = {
+    name: "Tom",
+    showName: Bob.showName  // Tom     只是调用了Bob的函数，并没有执行。 执行环境取决this的值 
+};
+
+var Tom = {
+    name: "Tom",
+    showName: function() {
+
+         Bob.showName();      //Bob    调用并执行
+
+    }  
+};
+
+var Tom = {
+    name: "Tom",
+    showName: function() {
+         var f = Bob.showName;
+         f();    //window    匿名函数执行
+    }  
+};
+
+Tom.showName();  
