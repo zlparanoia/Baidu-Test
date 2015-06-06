@@ -75,3 +75,5 @@ text[name];   //4
 
 ### 6-4：完成javascript闭包学习笔记。
          完成javascript面向对象学习笔记。
+         
+### 6-6: 完成javascript设计模式学习笔记。
